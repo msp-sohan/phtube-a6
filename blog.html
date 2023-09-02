@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>PH Tube Blog</title>
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="./asset/Logo.png" type="image/x-icon">
+   <!-- Tailwind and daisyUI cdn -->
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/c0f03ea56c.js" crossorigin="anonymous"></script>
+</head>
+<body class="container mx-auto">
+   <header>
+      <!-- Navbar -->
+      <nav class="px-5 xl:px-0">
+         <div class="navbar mt-7">
+            <div class="navbar-start">
+               <img src="./asset/Logo.png" alt="" class="">
+            </div>
+            <div class="navbar-end text-right">
+               <button><a class="btn text-sm font-medium text-white bg-[#FF1F3D] hover:text-[#FF1F3D]" href="./index.html">Home</a></button>
+            </div>
+         </div>
+      </nav>
+      <hr class="h-[3px] my-8 bg-gray-200 border-0">
+      <div class="p-5">
+         <h1 class="text-4xl font-semibold text-center  pb-4 border-b-4 border-indigo-500">Blog Post</h1>
+      </div>
+   </header>
+   <!-- Main -->
+   <main class="container mx-auto px-5 md:px-20 xl:px-0">
+      <!-- var let const container -->
+      <div>
+         <h2 class="text-xl md:text-3xl font-semibold">1. Discuss the scope of var, let, and const</h2>
+            <div class="flex justify-center">
+               <img src="./asset/var-let-const.jpg" alt="" class="w-[40%] my-5">
+            </div>
+      </div>
+      <section class="flex flex-col lg:flex-row gap-4 my-5">
+         <!-- Var -->
+         <div class="flex-1 border border-purple-500 p-5">
+            <p><span class="text-base md:md:text-xl font-medium underline">1. JavaScript var keyword:</span> The Var keyword is a global variable. Variables declared with var can be re-declared and reassigned.</p>
+            <p class="py-2"><span class="text-base md:text-xl font-medium underline">Scope:</span> The scope of the var keyword is the global or function scope. It means variables defined outside the function can be accessed globally, and variables defined inside a particular function can be accessed within the function. </p>
+            <p><span class="text-base md:text-xl font-medium underline">Example: </span> Variable ‘a’ is declared globally. So, the scope of the variable ‘a’ is global, and it can be accessible everywhere in the program. The output shown is in the console.</p>
+            <h5 class="text-xl font-medium py-5">Javascript</h5>
+            <p>var a = 10 <br>
+               var a = 100 <br>
+               console.log(a) <br>
+               <br>
+               var x = 10<br>
+               x = 1000 <br>
+               console.log(x);
+            </p>
+            <p class="text-xl font-medium py-5">Output: </p>
+            <p>100 <br> 1000</p>
+         </div>
+         <!-- Let -->
+         <div class="my-10 md:my-0 flex-1 border border-green-500 p-5">
+            <p><span class="text-base md:md:text-xl font-medium underline">2. JavaScript let keyword:</span> Just like var, variables declared with let can be reassigned to other values, but they cannot be re-declared.</p>
+            <p class="py-2"><span class="text-base md:text-xl font-medium underline">Scope:</span> This is Block Scoped: The scope of a let variable is only block scoped. It can’t be accessible outside the particular block ({block}). Let’s see the below example.</p>
+            <p><span class="text-base md:text-xl font-medium underline">Example: </span>Users cannot re-declare the variable defined with the let keyword but can update it.</p>
+            <h5 class="text-xl font-medium py-5">Javascript</h5>
+            <p>let a = 10 <br>
+               let a = 10 <br>
+               console.log(a) <br>
+               <br>
+               let x = 10 <br>
+               x = 10 <br>
+               console.log(x)
+            </p>
+            <p class="text-xl font-medium py-5">Output: </p>
+            <p>Uncaught SyntaxError: Identifier 'a' has already been declared<br> 10</p>
+         </div>
+         <!-- Const -->
+         <div class="flex-1 p-5 border border-red-500">
+            <p><span class="text-base md:md:text-xl font-medium underline">3. JavaScript Const keyword:</span> const is different from var and let. const is used for declaring constant variables – which are variables with values that cannot be changed.</p>
+            <p class="py-2"><span class="text-base md:text-xl font-medium underline">Scope:</span> Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through re-assignment, and it can't be re-declared.</p>
+            <p><span class="text-base md:text-xl font-medium underline">Example:</span> Variable ‘a’ is declared globally. So, the scope of the variable ‘a’ is global, and it can be accessible everywhere in the program. The output shown is in the console.</p>
+            <h5 class="text-xl font-medium py-5">Javascript</h5>
+            <p>const number1 = 50 <br>
+               const number1 = 100<br>
+               console.log(number1) <br>
+               <br>
+               const number2 = 50<br>
+               number2 = 100<br>
+               console.log(number2);
+            </p>
+            <p class="text-xl font-medium py-5">Output: </p>
+            <p>// SyntaxError: Identifier 'number' has already been declared<br> // TypeError: Assignment to constant variable</p>
+         </div>
+      </section>
+      <!-- null and undefined container -->
+      <div class="mt-10">
+         <h2 class="text-xl md:text-3xl font-semibold">2. Tell us the use cases of null and undefined</h2>
+            <div class="flex justify-center">
+               <img src="./asset/null-vs-undefined.jpg" alt="" class="w-[40%] my-5">
+            </div>
+      </div>
+      <section class="flex flex-col lg:flex-row gap-4 my-5">
+         <!-- Null -->
+         <div class="flex-1 border border-blue-500 p-5">
+            <h3 class="text-xl md:text-4xl font-semibold text-center pb-2 border-b-4">Null</h3>
+            <h5 class="text-xl md:text-3xl font-medium py-5">What is Null?</h5>
+            <p>Null literally means no value. The same meaning is analogous to the meaning of null in programming. Null is basically an assignment value to a variable. A variable assigned as null has no value.</p>
+
+            <p class="py-2">When we assign null as a value to any variable, it means that it is empty or blank. It is to show that the variable has no value. Also, null is an object in JavaScript. When it gets assigned to a variable, it represents no value. The setting of the value must be done manually by the user as JavaScript never sets the value as null. An object can be emptied by setting it to null.</p>
+
+            <h5 class="text-xl font-medium py-5">Syntax of Null in JavaScript</h5> 
+            <p>var x = null;</p>
+            <p>Here we have assigned the value null to variable x.</p>
+         </div>
+         <!-- Undefined -->
+         <div class="my-10 md:my-0 flex-1 border border-yellow-500 p-5">
+            <h3 class="text-xl md:text-4xl font-semibold text-center pb-2 border-b-4">Undefined</h3>
+            <h5 class="text-xl md:text-3xl font-medium py-5">What is Undefined?</h5>
+            <p>There is a subtle difference between null and undefined, but as a programmer, it is important that we understand it clearly.
+               As the name suggests, undefined means "not defined". So we declare a variable but do not assign a value to it, the variable becomes undefined.</p>
+
+            <p class="py-2">Unlike null, the value of an undefined variable is set by JavaScript as undefined. The variable gets created at the run-time. When we do not pass an argument for a function parameter, the default value is taken as undefined. Besides, when a function doesn't return a value, it returns undefined.</p>
+
+            <h5 class="text-xl font-medium py-5">Syntax of Undefined in JavaScript</h5>
+            <p>var x;</p>
+            <p>Here we don't assigned the value to variable x.</p>
+         </div>        
+      </section>
+      <!-- Rest Api Container -->
+      <div class="mt-10">
+         <h2 class="text-xl md:text-3xl font-semibold">3. What do you mean by REST API?</h2>
+            <div class="flex justify-center">
+               <img src="./asset/REST-API.jpg" alt="" class="w-[40%] my-5">
+            </div>
+      </div>
+      <section class="flex flex-col md:flex-row gap-4 my-5">
+         <!-- REST -->
+         <div class="flex-1 border border-pink-500 p-5">
+            <h5 class="text-3xl font-medium py-5">REST API?</h5>
+            <p>REST API stands for <b>Representational State Transfer Application Programming Interface</b>. It is an architectural style for an API that uses HTTP requests to access and use data. REST APIs are widely used in web development and other distributed systems.</p>
+            <h5 class="text-xl font-medium py-5">The full meaning of REST is as follows:</h5> 
+            <ul class="list-disc pl-5 pb-5">
+               <li><span class="text-lg font-medium">Representational:</span> The data in a REST API is represented in a resource-oriented way. This means that each piece of data is represented as a resource, and each resource has its own unique URI.</li>
+               <br>
+               <li><span class="text-lg font-medium">Stateless:</span> REST APIs are stateless, which means that the server does not store any information about the client's state. This makes REST APIs more scalable and efficient.</li>
+               <br>
+               <li><span class="text-lg font-medium">Transfer:</span> The data in a REST API is transferred using the HTTP protocol. HTTP is a well-known and well-supported protocol, which makes REST APIs easy to use and secure.</li>
+               <br>
+               <li><span class="text-lg font-medium">API-Application Programming Interface:</span> A REST API is an application programming interface (API). This means that it is a set of rules that define how software applications can interact with each other.</li>
+            </ul>
+         </div>
+      </section>
+   </main>
+</body>
+</html>

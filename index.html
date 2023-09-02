@@ -1,0 +1,67 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>PH Tube</title>
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="./asset/Logo.png" type="image/x-icon">
+   <!-- Tailwind and daisyUI cdn -->
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/c0f03ea56c.js" crossorigin="anonymous"></script> 
+
+</head>
+<body class="container mx-auto">
+   <!-- Header -->
+   <header>
+      <!-- Nav Bar -->
+      <nav class="px-5 xl:px-0">
+         <div class="bg-base-100 mt-7 grid grid-cols-2 md:grid-cols-3  justify-start items-center mx-auto"> 
+            <div class="md:order-1">
+               <img src="./asset/Logo.png" alt="" class="">
+            </div>
+            <div class="md:order-3 text-end">
+               <button> <a class="btn bg-[#FF1F3D] text-sm font-medium text-white hover:text-[#FF1F3D]" href="./blog.html">Blog</a> </button>
+            </div>
+            <div class="md:order-2 flex justify-center md:justify-center col-span-2 md:col-auto mt-5 md:mt-0">
+               <button id="shortViews" class="p-3 bg-slate-200 rounded-lg text-xl font-medium hover:bg-[#FF1F3D] hover:text-white">Sort by view</button>
+            </div>
+         </div>
+      </nav>      
+      <hr class="h-[3px] my-7 bg-gray-200 border-0">
+   </header>
+   <!-- Main -->
+   <main>
+      <!-- Category Section -->
+      <section class="text-center">
+         <div id="category-menu" class="flex justify-center items-center gap-3 md:gap-6">
+           
+         </div>
+      </section>
+
+      <!-- Items Display Section -->
+      <section class="my-7">
+         <div id="display-section" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-5 xl:px-0">
+
+         </div>
+         <!-- No Data Message -->
+            <div id="no-data-message" class="mt-10 md:mt-40 hidden">
+                <div class="flex flex-col justify-center items-center">
+                  <img src="./asset/Icon.png" alt="" class="w-[40%] md:w-[15%]">
+                  <p class="text-3xl font-bold text-center pt-10">Oops!! Sorry, There is no <br> content here</p>
+                </div>
+            </div>        
+      </section>
+
+   </main>
+   <!-- Footer -->
+   <footer>
+
+   </footer>
+   
+   <!-- JavaScript File -->
+   <script src="script.js"></script>
+</body>
+</html>
