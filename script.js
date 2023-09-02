@@ -20,7 +20,6 @@ const loadTubeData = async () => {
    const firstCategoryButton = document.querySelector('#category-menu button');
    if (firstCategoryButton) {
       firstCategoryButton.focus();
-      firstCategoryButton.active();
    }
    categoryBtnHandler('1000'); 
 
@@ -60,7 +59,6 @@ const categoryBtnHandler = async (categoryID) => {
 
       // Loop Throw to All Video Card Item
       categoryData.forEach((card) => {
-         console.log(card);
          // create a Div
          const display = document.createElement('div')
          display.classList = `card card-compact bg-base-100 shadow-xl`
