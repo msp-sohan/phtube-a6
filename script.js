@@ -52,7 +52,7 @@ const categoryBtnHandler = async (categoryID) => {
          categoryData.sort((a, b) => {
            const viewA = a.others.views.split('K')[0];
            const viewB = b.others.views.split('K')[0];
-           return viewA - viewB;
+           return viewB - viewA;
          });
          displayCard(categoryData);
       });
